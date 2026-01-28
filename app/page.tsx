@@ -1,8 +1,8 @@
 export default function Home() {
   const links = [
     { name: "Rowland's Portfolio", link: "https://rojthegoat.com", description: "Creative Development" },
-    { name: "Lagos meet's editorials", link: "https://lagos-meet.com", description: "Creative Development, Web Development" },
-    { name: "Seabreeze", link: "https://challenge.theseabreezebook.com/", description: "Creative Development, Web Development" },
+    { name: "Lagos meet's editorials", link: "https://lagos-meet.com", description: "Creative Development, Payment Integration" },
+    { name: "Seabreeze", link: "https://challenge.theseabreezebook.com/", description: "Backend Development, Web Development, Payment Integration" },
   ];
 
   return (
@@ -22,7 +22,8 @@ export default function Home() {
 </div>
         <ul className="flex flex-col space-y-3">
           {links.map((project) => (
-            <li key={project.name}>
+          <div key={project.name}>
+              <li>
               <a
                 href={project.link}
                 target="_blank"
@@ -37,6 +38,8 @@ export default function Home() {
                 </span>
               </a>
             </li>
+            <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{project.description}</p>
+          </div>
           ))}
         </ul>
         <div className="pt-8">
